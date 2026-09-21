@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apartment Homelab Network</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <p><a href="../index.html">← Back to portfolio</a></p>
+
+    <h1>Apartment Homelab Network</h1>
+    <p class="section-intro">Omada SDN, wall APs, VLANs, and Pi-hole DNS in a small apartment network.</p>
+
+    <section>
+      <h2>Goal</h2>
+      <p>
+        Build a reliable home network that separates trusted devices from IoT and streaming boxes,
+        keeps DNS filtering local, and is easy to manage without enterprise hardware.
+      </p>
+    </section>
+
+    <section>
+      <h2>Hardware</h2>
+      <ul>
+        <li>TP-Link Omada gateway / controller</li>
+        <li>EAP235-Wall access points</li>
+        <li>Managed switch (as needed for VLANs)</li>
+        <li>Pi-hole host (existing homelab machine or small VM)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Design</h2>
+      <ul>
+        <li><strong>Trusted LAN</strong> — laptops, phones, admin access</li>
+        <li><strong>IoT VLAN</strong> — isolated smart devices, no lateral access to the LAN</li>
+        <li><strong>Media / TV VLAN</strong> — Android TV boxes and streaming devices</li>
+        <li><strong>DNS</strong> — Pi-hole as primary DNS; router/DHCP hands that address to clients</li>
+        <li><strong>Wireless</strong> — SSIDs mapped to VLANs on the wall APs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What I configured</h2>
+      <ul>
+        <li>Omada site, controller, and AP adoption</li>
+        <li>SSID to VLAN mapping</li>
+        <li>DHCP scopes per subnet</li>
+        <li>Firewall / inter-VLAN rules (IoT can reach internet, not the admin LAN)</li>
+        <li>Pi-hole upstream DNS and client lists</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Current status</h2>
+      <p>In progress. Core wireless and VLAN plan are in place; still tightening isolation rules and documenting the IP plan.</p>
+    </section>
+
+    <section>
+      <h2>What I learned</h2>
+      <ul>
+        <li>Wall APs are a better fit for an apartment than ceiling units.</li>
+        <li>VLANs only help if DHCP, DNS, and firewall rules all match the same plan.</li>
+        <li>IoT and TV boxes need internet, not access to every other device.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

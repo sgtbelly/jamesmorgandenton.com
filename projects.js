@@ -4,6 +4,7 @@ const projects = [
     category: "networking",
     status: "in-progress",
     detail: "Omada SDN with EAP235-Wall APs, VLAN/subnet plan, device isolation for IoT and Android TV boxes, Pi-hole as primary DNS.",
+    href:"./homelab-network.html",
     tags: ["Omada", "VLANs", "Pi-hole"]
   },
   {
@@ -11,6 +12,7 @@ const projects = [
     category: "homelab",
     status: "in-progress",
     detail: "Proxmox on existing hardware, Plex media server, DAS storage planning, and service dashboards.",
+    projectUrl:"",
     tags: ["Proxmox", "Plex", "Storage"]
   },
   {
@@ -18,6 +20,7 @@ const projects = [
     category: "homelab",
     status: "in-progress",
     detail: "Homarr dashboard, Obsidian server, Cloudflare Tunnel access, and targeted VPN with GlueTun.",
+    projectUrl: "",
     tags: ["Homarr", "Cloudflare", "VPN"]
   },
   {
@@ -25,6 +28,7 @@ const projects = [
     category: "education",
     status: "complete",
     detail: "Documented lab rebuilds for DNS hijack fixes, OSPF, and managed switch configs used in coursework.",
+    projectUrl: "",
     tags: ["Labs", "Cisco", "Docs"]
   },
   {
@@ -32,6 +36,7 @@ const projects = [
     category: "web",
     status: "in-progress",
     detail: "This site — a simple static portfolio for education and project write-ups.",
+    projectUrl: "",
     tags: ["HTML", "CSS", "JS"]
   }
 ];
@@ -49,7 +54,7 @@ function projectCard(item) {
         <span class="status ${item.status}">${statusLabel}</span>
         <span class="tag">${item.category}</span>
       </div>
-      <h3>${item.title}</h3>
+      <h3><a href="${item.href || "#projects"}">${item.title}</a></h3>
       <p>${item.detail}</p>
       <div class="meta">${tags}</div>
     </article>
