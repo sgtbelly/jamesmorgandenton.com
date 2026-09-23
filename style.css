@@ -153,6 +153,6 @@ footer {
   color: #0066cc;
 }
 
-.card-title, .log-link { display: inline; margin: 0; color: #0066cc; }
+.card-title, .log-link { display: inline; margin: 0; color:inherit; }
 .project-log { margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee; }
 .log-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: #888; }
