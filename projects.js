@@ -19,7 +19,7 @@ const projects = [
     title: "Self-hosted Services",
     category: "homelab",
     status: "in-progress",
-    detail: "Homarr dashboard, Obsidian server, Cloudflare Tunnel access, and targeted VPN with GlueTun.",
+    detail: "Homarr dashboard, Obsidian server, Local AI server, Cloudflare Tunnel access, and targeted VPN with GlueTun.",
     href: "self-hosted.html",
     tags: ["Homarr", "Cloudflare", "VPN"]
   },
